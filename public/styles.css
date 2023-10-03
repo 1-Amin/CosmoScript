@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Nunito&family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Nunito&family=Racing+Sans+One&family=Tilt+Warp&display=swap");
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  /* overflow-x: hidden; */
+  font-family: Nunito;
+  background-image: url(./images/headerBackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: ; */
+  /* background-position: center; */
+}
+
+/* -----Navbar----- */
+.navbar {
+  margin: 0 10% 0 10%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* -----Header----- */
+
+.header {
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.headerText p {
+  line-height: 105%; /* 42px */
+  font-size: 30px;
+  /* width: 100px; */
+  max-width: 500px;
+  margin-bottom: 140px;
+}
+
+.headerText div {
+}
+
+h1 {
+  font-family: Racing Sans One;
+  font-size: 140px;
+  line-height: normal;
+  text-shadow: #070a53 10px 26px;
+  margin: 180px 0px 50px 0;
+}
+h2 {
+  text-align: center;
+  position: relative;
+  /* top: 220px; */
+}
+.goButtonBox {
+ 
+ height: 360px;
+}
+
+.goButtonBox .goButton {
+  width: 360px;
+  height: auto;
+}
+.goButtonBox p {
+  z-index: 1;
+  position: relative;
+  bottom: 260px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
+
+/* ----Main---- */
+
+
+
+@media screen and (max-width: 1300px) {
+  .goButtonBox .goButton {
+    width: 280px;
+  }
+  h1 {
+    font-size: 7rem;
+    margin: 80px 0px 0px 0;
+  }
+  .headerText p {
+    
+    max-width: 260px;
+    margin-bottom: 60px;
+  }
+  .goButtonBox p{
+    bottom: 200px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 60px;
+    margin: 80px 0px 0px 0;
+    text-shadow: #070a53 5px 15px;
+  }
+  .goButtonBox .goButton {
+    width: 200px;
+  }
+  .headerText p {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+  .goButtonBox p{
+    bottom: 140px;
+    left: 0px
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    display: none;
+  }
+  body {
+    background-size: 120%;
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 50px 0px 0px 0;
+    
+  }
+  .goButtonBox .goButton {
+    width: 100px;
+  }
+  .goButtonBox p{
+    bottom: 74px;
+    font-size: 10px;
+  }
+}
