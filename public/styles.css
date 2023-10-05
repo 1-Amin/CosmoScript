@@ -32,10 +32,11 @@ body {
   line-height: normal;
 }
 
-/* -----Header----- */
-
-.header {
+.burger{ 
+    display: none;
 }
+
+/* -----Header----- */
 
 .headerText {
   display: flex;
@@ -52,10 +53,7 @@ body {
   font-size: 30px;
   /* width: 100px; */
   max-width: 500px;
-  margin-bottom: 140px;
-}
-
-.headerText div {
+  margin-bottom: 120px;
 }
 
 h1 {
@@ -63,17 +61,14 @@ h1 {
   font-size: 140px;
   line-height: normal;
   text-shadow: #070a53 10px 26px;
-  margin: 180px 0px 50px 0;
+  margin: 170px 0px 50px 0;
 }
 h2 {
   text-align: center;
   position: relative;
   /* top: 220px; */
 }
-.goButtonBox {
- 
- height: 360px;
-}
+
 
 .goButtonBox .goButton {
   width: 360px;
@@ -87,9 +82,100 @@ h2 {
   font-size: 30px;
 }
 
-
-
 /* ----Main---- */
+
+.main {
+  margin: 0 5% 4% 5%;
+}
+
+.opisanie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-top: 100px; */
+}
+.opisanie2 {
+  justify-content: center;
+}
+
+.opisanie3 {
+  justify-content: end;
+}
+
+.opisanie4 {
+  justify-content: center;
+}
+.opisanieText {
+  width: 300px;
+}
+
+.opisanieText h3 {
+  color: #7bcffa;
+  font-size: x-large;
+}
+.opisanieText p::first-letter {
+  margin-left: 14px;
+}
+.opisanie img {
+  max-width: 500px;
+  width: 100%;
+  /* height: auto; */
+}
+.opisanieButton {
+  border-radius: 50px;
+  /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); */
+  border: none;
+  width: 286px;
+  height: 50px;
+  flex-shrink: 0;
+  color: #fff;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.opisanieButton1 {
+  background: #0f64fb;
+}
+.opisanieButton2 {
+  background: #fb2b0f;
+}
+
+.arrowbox {
+  display: flex;
+}
+
+.arrowbox1 {
+  justify-content: center;
+  position: relative;
+  right: 260px;
+}
+.arrowbox2 {
+  justify-content: center;
+}
+
+.arrowbox3 {
+  justify-content: center;
+}
+
+.arrowbox4 {
+  justify-content: center;
+  position: relative;
+  right: 260px;
+}
+
+.arrow {
+  max-width: 120px;
+  width: auto;
+  height: auto;
+}
+.arrow1 {
+  position: relative;
+}
 
 
 
@@ -102,13 +188,30 @@ h2 {
     margin: 80px 0px 0px 0;
   }
   .headerText p {
-    
     max-width: 260px;
     margin-bottom: 60px;
   }
-  .goButtonBox p{
+  .goButtonBox p {
     bottom: 200px;
     left: 10px;
+  }
+  .opisanie {
+    justify-content: center;
+    align-items: center;
+  }
+  .arrow1,
+  .arrow2 {
+    transform: rotate(40deg);
+  }
+  .arrow3,
+  .arrow4 {
+    transform: rotate(-30deg);
+  }
+  .arrowbox {
+    position: static;
+  }
+  .opisanieText {
+    text-align: center;
   }
 }
 
@@ -125,29 +228,74 @@ h2 {
     font-size: 15px;
     margin-bottom: 40px;
   }
-  .goButtonBox p{
+  .goButtonBox p {
     bottom: 140px;
-    left: 0px
+    left: 0px;
+  }
+
+  .opisanie img {
+    width: 300px;
+    height: 160px;
+  }
+  .burger{ 
+    display:unset;
+}
+.navbar a {
+    display: none;
+  }
+  .navbar {
+     justify-content: start;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .navbar a {
-    display: none;
-  }
+
   body {
     background-size: 120%;
+    background-image: url(./images/headerBackgroundMobile.svg);
+    background-color: #030a1c;
   }
+
   h1 {
     font-size: 3rem;
-    margin: 50px 0px 0px 0;
-    
+    margin: 30px 0px 0px 0;
   }
   .goButtonBox .goButton {
     width: 100px;
   }
-  .goButtonBox p{
+  .goButtonBox p {
     bottom: 74px;
+  }
+  .goButtonBox {
+    height: 100px;
+  }
+  .opisanie img {
+    width: 280px;
+    height: 140px;
+  }
+  .opisanieText h3 {
+    color: #7bcffa;
+    font-size: large;
+  }
+  .opisanieButton {
+    width: 200px;
+    height: 30px;
     font-size: 10px;
+  }
+
+  .arrow {
+    width: 80px;
+  }
+  .main {
+    margin-top: 10%;
+  }
+  p {
+    font-size: smaller;
+  }
+  h2 {
+    font-size: large;
+  }
+  h3 {
+    font-size: medium;
   }
 }
