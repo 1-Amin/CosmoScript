@@ -6,18 +6,7 @@ import Grow from "@mui/material/Grow";
 const url = "/api/get_tariff/";
 function Tariff() {
   const [tariffData, setTariffData] = useState([]);
-  // const [price, setPrice] = useState({ total_cost: "2" });
-  // const [priceMessage, dispatch] = useReducer(reducer, price);
-  // function reducer(state, action) {
-  //   if (action.type === "SHOW_TARIFF") {
-  //     setPrice(action.payload.message);
-  //     setOpen(true);
-  //   }
-  // }
 
-  // function handleClose() {
-  //   setOpen(false);
-  // }
 
   useEffect(() => {
     const fetchData = async () => {
