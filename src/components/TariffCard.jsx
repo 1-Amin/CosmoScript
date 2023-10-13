@@ -23,7 +23,7 @@ function TariffCard(props) {
 
   const src = "./images/" + data.price + ".svg";
   return (
-    <section>
+    <section >
       <Grow in={true}>
         <div className="card">
           <div className="rectangle">
