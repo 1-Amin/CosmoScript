@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 function Header() {
   return (
     <div className="header">
-      <Navbar />
+    <Navbar />
       <div className="headerText">
         <h1>Cosmo Script</h1>
         <div>

@@ -7,17 +7,15 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
-  /* overflow-x: hidden; */
   font-family: Nunito;
   background-image: url(./images/headerBackground.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: ; */
-  /* background-position: center; */
+  
 }
 
 /* -----Navbar----- */
-.navbar {
+.desktopNavbar {
   margin: 0 10% 0 10%;
   padding-top: 2%;
   display: flex;
@@ -25,15 +23,14 @@ body {
 }
 
 .navbar a {
-  text-align: center;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 
-.burger{ 
-    display: none;
+.burger {
+  display: none;
 }
 
 /* -----Header----- */
@@ -49,9 +46,8 @@ body {
 }
 
 .headerText p {
-  line-height: 105%; /* 42px */
+  line-height: 105%; 
   font-size: 30px;
-  /* width: 100px; */
   max-width: 500px;
   margin-bottom: 120px;
 }
@@ -66,9 +62,15 @@ h1 {
 h2 {
   text-align: center;
   position: relative;
-  /* top: 220px; */
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #b75ff3;
+}
 
 .goButtonBox .goButton {
   width: 360px;
@@ -92,7 +94,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* margin-top: 100px; */
 }
 .opisanie2 {
   justify-content: center;
@@ -123,7 +124,6 @@ h2 {
 }
 .opisanieButton {
   border-radius: 50px;
-  /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); */
   border: none;
   width: 286px;
   height: 50px;
@@ -177,7 +177,107 @@ h2 {
   position: relative;
 }
 
+/* -----Tariff----- */
 
+.tariffPage {
+  background-image: url(./images/tariffBackground.svg);
+  background-size: 100%;
+}
+
+.card {
+  margin: 20% 60px;
+}
+
+.card .rectangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f933;
+  border-radius: 207.5px;
+  height: 800px;
+  width: 325px;
+}
+.cardImg {
+  width: 310px;
+ 
+}
+
+.cardPrice {
+  color: #ffffff;
+  font-family: "Nunito-Light", Helvetica;
+  font-size: 60px;
+  height: 80px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cardParagraph::first-letter {
+  margin-left: 14px;
+}
+.cardParagraph {
+  width: 250px;
+  height: 180px;
+}
+
+.cardButton {
+  border-radius: 30px;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  background-color: #b75ff3;
+  font-size: 20px;
+  height: 50px;
+  width: 220px;
+}
+.cardHeader {
+  color: #7bd0ff;
+  font-family: "Nunito-SemiBold", Helvetica;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  font-size: 26px;
+  width: 340px;
+  height: 50px;
+}
+
+.cardBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tariffInput {
+  height: 40px;
+  border-radius: 30px;
+  width: 100px;
+  padding-left: 16px;
+  background-color: #ffffff9e;
+  border: none;
+  font-size: medium;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.totalPrice {
+  max-width: 400px;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+}
+.totalPrice div {
+  margin: 80px;
+}
+.totalPrice h4 {
+  font-size: 40px;
+}
 
 @media screen and (max-width: 1300px) {
   .goButtonBox .goButton {
@@ -186,6 +286,11 @@ h2 {
   h1 {
     font-size: 7rem;
     margin: 80px 0px 0px 0;
+  }
+  body {
+    background-size: 120%;
+    background-image: url(./images/headerBackgroundMobile.svg);
+    background-color: #030a1c;
   }
   .headerText p {
     max-width: 260px;
@@ -213,6 +318,44 @@ h2 {
   .opisanieText {
     text-align: center;
   }
+
+  /* ----Card----- */
+  .tariffPage {
+    background-size: cover;
+  }
+  .card .rectangle {
+    height: 620px;
+    width: 245px;
+    text-align: center;
+  }
+  .cardImg {
+    width: 220px;
+  }
+  .cardPrice {
+    height: 60px;
+    font-size: 40px;
+  }
+
+  .cardHeader {
+    font-size: 20px;
+    width: 240px;
+    height: 30px;
+  }
+  .cardParagraph {
+    width: 220px;
+    height: 140px;
+    font-size: small;
+  }
+  .cardButton {
+    font-size: 14px;
+    height: 40px;
+    width: 180px;
+  }
+  .tariffInput {
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -237,25 +380,69 @@ h2 {
     width: 300px;
     height: 160px;
   }
-  .burger{ 
-    display:unset;
-}
-.navbar a {
+  .burger {
+    display: unset;
+  }
+  .desktopNavbar {
     display: none;
   }
-  .navbar {
-     justify-content: start;
+
+  /* ----Card----- */
+
+  .card .rectangle {
+    height: 520px;
+    width: 200px;
+    text-align: center;
+  }
+  .cardImg {
+    width: 180px;
+  }
+  .cardPrice {
+    height: 40px;
+    font-size: 30px;
+  }
+
+  .cardHeader {
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+  }
+  .cardParagraph {
+    width: 180px;
+    height: 140px;
+    font-size: 12px;
+  }
+  .cardButton {
+    font-size: 12px;
+    height: 30px;
+    width: 160px;
+  }
+  .tariffInput {
+    height: 20px;
+    width: 60px;
+    font-size: 12px;
+  }
+  .mobileNavbar {
+    background-color: white;
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    
+  }
+  .mobileNavbar a {
+    color: black;
+    margin-left: 36px;
+    
+  }
+  .totalPrice div {
+    margin: 40px;
   }
 }
 
 @media screen and (max-width: 500px) {
-
-  body {
-    background-size: 120%;
-    background-image: url(./images/headerBackgroundMobile.svg);
-    background-color: #030a1c;
-  }
-
   h1 {
     font-size: 3rem;
     margin: 30px 0px 0px 0;
@@ -264,14 +451,14 @@ h2 {
     width: 100px;
   }
   .goButtonBox p {
-    bottom: 74px;
+    bottom: 80px;
   }
   .goButtonBox {
     height: 100px;
   }
   .opisanie img {
-    width: 280px;
-    height: 140px;
+    width: 320px;
+    height: 160px;
   }
   .opisanieText h3 {
     color: #7bcffa;
@@ -288,6 +475,29 @@ h2 {
   }
   .main {
     margin-top: 10%;
+  }
+  /* ----Card----- */
+  .tariffPage {
+    background-position-x: -440px;
+  }
+  .card .rectangle {
+    height: 510px;
+    width: 260px;
+    text-align: center;
+  }
+  .tariffInput {
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+  }
+  form {
+    gap: 10px;
+  }
+  .card {
+    margin: 5%;
+  }
+  .totalPrice div {
+    margin: 20px;
   }
   p {
     font-size: smaller;

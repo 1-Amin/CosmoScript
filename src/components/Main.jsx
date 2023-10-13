@@ -21,7 +21,7 @@ function Main() {
         <img src="./images/arrow1.svg" className="arrow arrow1" />
       </div>
 
-      <div className="opisanie opisanie2">
+      <div className="opisanie opisanie2" >
         <img src="./images/Op2.png" />
         <div className="opisanieText">
           <h3>Запоминаем имена</h3>
